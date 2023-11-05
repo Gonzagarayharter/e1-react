@@ -18,6 +18,12 @@ export const TextDiv = styled.div`
     justify-content: center;
     align-items: center;
     gap: 5px;
+
+    @media (max-width: 400px) {
+    & h1 {
+        font-size: 20px;
+    }
+  }
 `
 
 export const RedesDiv = styled.div`
@@ -28,4 +34,10 @@ export const RedesDiv = styled.div`
         font-size: 25px;
         color: #819e4f;
     }
+
+    @media (max-width: 400px) {
+    & a {
+        font-size: 20px;
+    }
+  }
 `

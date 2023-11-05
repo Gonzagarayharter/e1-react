@@ -10,7 +10,14 @@ export const NosotrosDiv = styled.div`
 
     & img {
         border-radius: 30px;
+        width: 60%;
     }
+    
+  @media (max-width: 700px) {
+    & img {
+      display: none;
+    }
+  }
 `
 
 export const NosotrosTextDiv = styled(NosotrosDiv)`

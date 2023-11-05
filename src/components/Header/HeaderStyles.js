@@ -13,6 +13,25 @@ export const StyledHeader = styled.div`
         height: 150px;
         width: 500px;
     }
+
+    @media (max-width: 1200px) {
+        justify-content: space-between;        
+        position: absolute;
+    }
+
+    @media (max-width: 580px) {
+        & img {
+            width: 350px;
+            height: 140px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        & img {
+            width: 250px;
+            height: 140px;
+        }
+    }
 `
 
 export const StyledNav = styled.nav`
@@ -22,7 +41,7 @@ export const StyledNav = styled.nav`
 `
 
 export const LinksDiv = styled(StyledNav)`
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         display: none;
     }
 
@@ -44,7 +63,7 @@ export const MenuDiv = styled.div`
     align-items: center;
     font-size: 40px;
     cursor: pointer;
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         display: flex;
     }
 

@@ -16,12 +16,39 @@ export const ProductosDiv = styled.div`
     & h1 {
         font-size: 50px;
         letter-spacing: 5px;
+        text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        & h1 {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        & h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        & h1 {
+            font-size: 20px;
+        }
     }
 `
 
 export const ProductoDivContainer = styled.div`
     display: flex;
     gap: 20px;
+
+    
+  @media (max-width: 1400px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 `
 export const ProductoDiv = styled.div`
     display: flex;
@@ -33,6 +60,7 @@ export const ProductoDiv = styled.div`
     width: 300px;
     background-color: #bfdcd0;
     border-radius: 10px;
+    text-align: center;
 
     & img {
         height: 200px;
@@ -53,4 +81,42 @@ export const ProductoDiv = styled.div`
         width: 80%;
         cursor: pointer;
     }
+
+    @media (max-width: 1650px) {
+    width: 50%;
+
+    & h2 {
+        font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    & h2 {
+        font-size: 25px;
+    }
+
+    & img {
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 950px) {
+    width: 100%;
+
+    & img {
+        width: 60%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    & img {
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    & img {
+        height: 30%;
+    }
+  }
 `
