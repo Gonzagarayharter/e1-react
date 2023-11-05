@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Layout from "./components/Layout/Layout";
 import Nosotros from "./components/Nosotros/Nosotros";
-import Productos from "./components/Productos/productos";
+import Productos from "./components/Productos/Productos";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 function App() {
