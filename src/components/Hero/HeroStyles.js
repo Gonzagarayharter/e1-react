@@ -11,7 +11,7 @@ export const HeroDiv = styled.div`
     height: 800px;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1560px) {
     & img {
       display: none;
     }
@@ -46,7 +46,8 @@ export const HeroTextDiv = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1560px) {
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;

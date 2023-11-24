@@ -1,10 +1,14 @@
-import React from 'react'
-import { LayoutWrapper } from './LayoutStyles'
+import React from "react";
+import { LayoutWrapper } from "./LayoutStyles";
+import Header from "../Header/Header";
 
 const Layout = ({ children }) => {
   return (
-    <LayoutWrapper>{children}</LayoutWrapper>
-  )
-}
+    <>
+      <Header />
+      <LayoutWrapper>{children}</LayoutWrapper>
+    </>
+  );
+};
 
-export default Layout
+export default Layout;

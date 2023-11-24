@@ -6,9 +6,10 @@ export const NosotrosDiv = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 120px;
 
     & img {
+        margin-bottom: 100px;
         border-radius: 30px;
         width: 60%;
     }
@@ -35,5 +36,9 @@ export const NosotrosTextDiv = styled(NosotrosDiv)`
 
     & span {
         font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      width: 80%;
     }
 `

@@ -11,7 +11,7 @@ export const ProductosDiv = styled.div`
     padding: 30px;
     border-radius: 30px;
     width: 60%;
-    margin-top: 30px;
+    margin-bottom: 100px;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
 
     & h1 {
@@ -20,33 +20,46 @@ export const ProductosDiv = styled.div`
         text-align: center;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1250px) {
     width: 90%;
+    }
+
+    @media (max-width: 600px) {
+    width: 80%;
         & h1 {
             font-size: 40px;
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 280px) {
         & h1 {
-            font-size: 40px;
-        }
-    }
-
-    @media (max-width: 350px) {
-        & h1 {
-            font-size: 30px;
+            font-size: 20px;
         }
     }
 `
 
+export const ProductosDivStyled = styled(ProductosDiv)`
+    margin-top: 230px;
+    margin-bottom: 100px;
+`
+
 export const ProductoDivContainer = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 
     
   @media (max-width: 1400px) {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: 1400px) {
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -67,6 +80,7 @@ export const ProductoDiv = styled.div`
     & img {
         height: 200px;
         width: 250px;
+        align-items: center;
     }
 
     & h2 {
@@ -85,7 +99,7 @@ export const ProductoDiv = styled.div`
     }
 
     @media (max-width: 1650px) {
-    width: 50%;
+    width: 40%;
 
     & h2 {
         font-size: 20px;
@@ -93,6 +107,7 @@ export const ProductoDiv = styled.div`
   }
 
   @media (max-width: 1400px) {
+    width: 30%;
     & h2 {
         font-size: 25px;
     }
@@ -102,17 +117,15 @@ export const ProductoDiv = styled.div`
     }
   }
 
-  @media (max-width: 950px) {
-    width: 100%;
+  @media (max-width: 860px) {
+    width: 40%;
+  }
 
-    & img {
-        width: 60%;
-    }
+  @media (max-width: 680px) {
+    width: 70%;
   }
 
   @media (max-width: 600px) {
-    & img {
-        width: 80%;
-    }
+    width: 100%;
   }
 `

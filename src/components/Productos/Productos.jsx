@@ -9,7 +9,7 @@ const Productos = () => {
             <ProductoDiv>
                 <img src="https://kandelsdeco.com/wp-content/uploads/2020/03/napoleon-22png.png" alt="" />
                 <h2>Sofá Nápoles</h2>
-                <p>$120.000</p>
+                <p>$420.000</p>
                 <a href="">Comprar</a>
             </ProductoDiv>
             <ProductoDiv>
