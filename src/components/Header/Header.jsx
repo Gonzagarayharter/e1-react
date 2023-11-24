@@ -1,7 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import {
+  LinkHamburguesa,
   LinksDiv,
   MenuDiv,
+  MenuHamburguesa,
   NavLinkStyled,
   NavLinkStyledMenu,
   StyledHeader,
@@ -13,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
+  
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -50,24 +53,29 @@ const Header = () => {
 
           <MenuDiv ref={menuRef} onClick={toggleMenu}>
             <NavLinkStyledMenu>
+            <AiOutlineMenu />
             {isOpen && (
-              <LinksDiv>
-                <NavLinkStyled to={"/"}>Home</NavLinkStyled>
-                <NavLinkStyled to={"/about"}>Sobre nosotros</NavLinkStyled>
-                <NavLinkStyled to={"/tienda"}>Tienda</NavLinkStyled>
-                <NavLinkStyled to={"/contacto"}>Contacto</NavLinkStyled>
-                <NavLinkStyled>
-                  <AiOutlineUser />
-                </NavLinkStyled>
-                <NavLinkStyled>
-                  <FiShoppingCart />
-                </NavLinkStyled>
-                <NavLinkStyled>
-                  <AiOutlineSearch />
-                </NavLinkStyled>
-              </LinksDiv>
+              <MenuHamburguesa>
+                  <LinkHamburguesa to={"/"}>
+                    Home
+                  </LinkHamburguesa>
+
+                  <LinkHamburguesa to={"/about"}>
+                    Sobre Nosotros
+                  </LinkHamburguesa>
+
+
+                  <LinkHamburguesa to={"/tienda"}>
+                    Productos
+                  </LinkHamburguesa>
+
+
+                  <LinkHamburguesa to={"/contacto"}>
+                    Contacto
+                  </LinkHamburguesa>
+
+              </MenuHamburguesa>
             )}
-              <AiOutlineMenu />
             </NavLinkStyledMenu>
           </MenuDiv>
 

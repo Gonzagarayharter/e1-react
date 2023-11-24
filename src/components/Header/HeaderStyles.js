@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
 export const StyledHeader = styled.div`
@@ -19,9 +19,7 @@ export const StyledHeader = styled.div`
     }
 
     @media (max-width: 1300px) {
-        justify-content: space-between;        
-        position: absolute;
-        background: transparent;
+        justify-content: space-between;
     }
 
     @media (max-width: 580px) {
@@ -63,16 +61,6 @@ export const NavLinkStyled = styled(NavLink)`
     }
 `
 
-export const openMenu = keyframes`
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-`;
-
 export const MenuDiv = styled.div`
     display: none;
     align-items: center;
@@ -81,11 +69,27 @@ export const MenuDiv = styled.div`
     @media (max-width: 1400px) {
         display: flex;
     }
+`
 
-    &.open {
-    animation: ${openMenu} 0.3s ease-in-out;
-    background-color: aliceblue;
-    }
+export const MenuHamburguesa = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 150px;
+    right: 0px;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    z-index: 100;
+    background: rgb(41,128,92);
+    background: linear-gradient(90deg, rgba(41,128,92,1) 0%, rgba(22,152,152,1) 100%);
+`
+
+export const LinkHamburguesa = styled(NavLink)`
+    font-weight: 400;
+    font-size: 35px;
+    color: #353d3a;
 `
 
 export const NavLinkStyledMenu = styled(NavLink)`
