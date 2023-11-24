@@ -40,5 +40,6 @@ export const NosotrosTextDiv = styled(NosotrosDiv)`
 
     @media (max-width: 700px) {
       width: 80%;
+      text-align: center;
     }
 `
