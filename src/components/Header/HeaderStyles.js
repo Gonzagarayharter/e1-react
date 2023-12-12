@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const StyledHeader = styled.div`
     display: flex;
@@ -55,6 +56,17 @@ export const NavLinkStyled = styled(NavLink)`
     color: #353d3a;
     padding: 30px;
 
+    span {
+    padding: 3px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+
+    border-radius: 1rem;
+    border: 1px solid;
+    font-size: 0.9rem;
+  }
+
     &:hover {
         background-color: #fff;
         padding-top: 138px;
@@ -95,3 +107,18 @@ export const LinkHamburguesa = styled(NavLink)`
 export const NavLinkStyledMenu = styled(NavLink)`
     color: #353d3a;
 `
+
+export const ModalOverlayStyled = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: calc(100vw - 450px);
+  height: 100vh;
+
+  ${({ isHidden }) =>
+    !isHidden &&
+    css`
+      backdrop-filter: blur(4px);
+    `}
+`;

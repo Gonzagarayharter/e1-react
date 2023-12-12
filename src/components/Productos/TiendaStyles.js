@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const CategoryButton = styled.button`
+    border: none;
+        outline: none;
+        color: #fff;
+        background-color: #819e4f;
+        text-align: center;
+        padding: 10px;
+        width: 80%;
+        cursor: pointer;
+`
+
 export const ProductosDiv = styled.div`
     display: flex;
     align-items: center;

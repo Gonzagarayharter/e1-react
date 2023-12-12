@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+
 import {
   LinkHamburguesa,
   LinksDiv,
@@ -10,8 +11,9 @@ import {
   StyledNav,
 } from "./HeaderStyles";
 import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
-import { FiShoppingCart } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import CartIcon from "./CartIcon";
+import ModalCart from "../Cart/ModalCart";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -35,6 +37,7 @@ const Header = () => {
           />
         </div>
         <StyledNav>
+          <ModalCart />
           <LinksDiv>
             <NavLinkStyled to={"/"}>Home</NavLinkStyled>
             <NavLinkStyled to={"/about"}>Sobre nosotros</NavLinkStyled>
@@ -43,9 +46,7 @@ const Header = () => {
             <NavLinkStyled>
               <AiOutlineUser />
             </NavLinkStyled>
-            <NavLinkStyled>
-              <FiShoppingCart />
-            </NavLinkStyled>
+              <CartIcon />
             <NavLinkStyled>
               <AiOutlineSearch />
             </NavLinkStyled>
