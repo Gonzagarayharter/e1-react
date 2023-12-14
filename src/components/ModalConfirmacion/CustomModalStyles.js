@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -13,17 +13,29 @@ export const Overlay = styled.div`
 `;
 
 export const Content = styled.div`
-display: flex;
-flex-direction: column;
-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: #fff;
   padding: 40px;
   border-radius: 8px;
   text-align: center;
+
+  @media (max-width: 840px) {
+    width: 80%;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
   margin-top: 20px;
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
 `;
 
 export const Button = styled.button`
@@ -37,5 +49,9 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #819e4f;
+  }
+
+  @media (max-width: 400px) {
+    margin: 0;
   }
 `;

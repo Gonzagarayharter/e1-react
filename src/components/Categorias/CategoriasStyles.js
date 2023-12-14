@@ -38,11 +38,7 @@ export const CardCategoria = styled(motion.div)`
     font-size: 1rem;
   }
 
-  @media (max-width: 800px) {
-      width: 100%;
-    }
-
-    @media (max-width: 400px) {
+  @media (max-width: 817px) {
       width: 100%;
     }
 `;
