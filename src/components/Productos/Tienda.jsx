@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { ProductoDiv, ProductoDivContainer, ProductosDivStyled } from './TiendaStyles'
+import { BotonATienda } from './ProductosStyles';
 import { formatPrice } from '../../utils/formatPrice';
 import { addToCart } from '../../redux/cart/cartSlice';
 import Categorias from '../Categorias/Categorias';
@@ -51,9 +52,11 @@ const Tienda = () => {
               <img src={product.img} alt={product.title} />
               <h2>{product.title}</h2>
               <p>{formatPrice(product.price)}</p>
-              <a href="#" onClick={() => openModal(product)}>
-                Comprar
-              </a>
+              <BotonATienda 
+                onClick={() => openModal(product)}
+                to={"/tienda"}
+                whileTap={{ scale: 0.95 }}
+                >Comprar</BotonATienda>
             </ProductoDiv>
           ))}
         </ProductoDivContainer>

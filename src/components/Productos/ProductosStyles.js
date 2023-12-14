@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const ProductosDiv = styled.div`
     display: flex;
@@ -115,4 +117,14 @@ export const ProductoDiv = styled.div`
         width: 80%;
     }
   }
+`
+
+export const BotonATienda = styled(motion(NavLink))`
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: #819e4f;
+        text-align: center;
+        padding: 10px;
+        width: 80%;
 `

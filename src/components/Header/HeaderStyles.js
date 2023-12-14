@@ -9,13 +9,13 @@ export const StyledHeader = styled.div`
     width: 100%;
     position: fixed;
     padding: 20px;
-    height: 200px;
+    height: 120px;
     background: rgb(41,128,92);
     background: linear-gradient(90deg, rgba(41,128,92,1) 0%, rgba(22,152,152,1) 100%);
 
     & img {
-        height: 150px;
-        width: 500px;
+        height: 130px;
+        width: 400px;
         cursor: pointer;
     }
 
@@ -69,7 +69,19 @@ export const NavLinkStyled = styled(NavLink)`
 
     &:hover {
         background-color: #fff;
-        padding-top: 138px;
+        padding-top: 58px;
+    }
+
+    @media (max-width: 1560px) {
+        font-size: 22px;
+    }
+
+    @media (max-width: 1400px) {
+        &:hover {
+        color: white;
+        background-color: transparent;
+        padding: 0px;
+    }
     }
 `
 
@@ -83,11 +95,11 @@ export const MenuDiv = styled.div`
     }
 `
 
-export const MenuHamburguesa = styled.div`
+export const MenuHamburguesa = styled(motion.div)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 150px;
+    top: 120px;
     right: 0px;
     gap: 20px;
     width: 100%;
@@ -102,6 +114,10 @@ export const LinkHamburguesa = styled(NavLink)`
     font-weight: 400;
     font-size: 35px;
     color: #353d3a;
+
+    &:hover {
+        color: #fff;
+    }
 `
 
 export const NavLinkStyledMenu = styled(NavLink)`

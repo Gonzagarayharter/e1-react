@@ -57,10 +57,9 @@ const ModalCart = () => {
       <AnimatePresence>
         {!hiddenCart && (
           <ContainerStyled
-            initial={{ translateX: 600 }}
-            animate={{ translateX: 0 }}
+            initial={{ x: 300 }} 
+            animate={{ x: 0 }}
             exit={{ translateX: 600 }}
-            transition={{ type: 'spring', damping: 27 }}
             key='cart-modal'
           >
             <CloseButtonContainerStyled>

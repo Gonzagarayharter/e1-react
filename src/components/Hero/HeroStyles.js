@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const HeroDiv = styled.div`
   display: flex;
@@ -84,3 +86,16 @@ export const HeroTextDiv = styled.div`
     }
   }
 `;
+
+export const BotonHomeATienda = styled(motion(NavLink))`
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #819e4f;
+    box-shadow: 15px 15px 2px #000;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    width: 50%;
+    cursor: pointer;
+`

@@ -14,6 +14,7 @@ import { AiOutlineUser, AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import CartIcon from "./CartIcon";
 import ModalCart from "../Cart/ModalCart";
+import { AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -52,11 +53,17 @@ const Header = () => {
             </NavLinkStyled>
           </LinksDiv>
 
-          <MenuDiv ref={menuRef} onClick={toggleMenu}>
+          <AnimatePresence>
+          <MenuDiv 
+          ref={menuRef} onClick={toggleMenu}
+          >
             <NavLinkStyledMenu>
             <AiOutlineMenu />
             {isOpen && (
-              <MenuHamburguesa>
+              <MenuHamburguesa 
+              initial={{ opacity: 0, x: -50 }} 
+              animate={{ opacity: 1, x: 0 }} 
+              whileHover={{ scale: 1.1 }}>
                   <LinkHamburguesa to={"/"}>
                     Home
                   </LinkHamburguesa>
@@ -75,10 +82,15 @@ const Header = () => {
                     Contacto
                   </LinkHamburguesa>
 
+                  <LinkHamburguesa>
+                    <CartIcon />
+                  </LinkHamburguesa>
+
               </MenuHamburguesa>
             )}
             </NavLinkStyledMenu>
           </MenuDiv>
+          </AnimatePresence>
 
         </StyledNav>
       </StyledHeader>

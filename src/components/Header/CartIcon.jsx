@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-import { FiShoppingCart } from "react-icons/fi";
 import { NavLinkStyled } from './HeaderStyles';
+import { FiShoppingCart } from "react-icons/fi";
 
 import { toggleHiddenCart } from '../../redux/cart/cartSlice'
 
