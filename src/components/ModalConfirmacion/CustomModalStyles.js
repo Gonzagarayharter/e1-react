@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Overlay = styled.div`
+  z-index: 2000;
   position: fixed;
   top: 0;
   left: 0;

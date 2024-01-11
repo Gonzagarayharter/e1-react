@@ -10,7 +10,7 @@ const ClearCartConfirmationModal = ({ isOpen, onClose, onConfirm }) => {
           <Content>
             <h2>{`¿Estás seguro de que deseas vaciar el carrito?`}</h2>
             <ButtonsContainer>
-              <Button onClick={onConfirm}>Vaciar Carrito</Button>
+              <Button onClick={onConfirm}>Vaciar</Button>
               <Button onClick={onClose}>Cancelar</Button>
             </ButtonsContainer>
           </Content>
