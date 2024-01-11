@@ -176,7 +176,6 @@ const ModalCart = () => {
                   onClose={() => setIsCheckoutModalOpen(false)}
                   onConfirm={handleCheckout}
                 />
-                
               </ButtonContainerStyled>
             </PriceContainerStyled>
           </ContainerStyled>
