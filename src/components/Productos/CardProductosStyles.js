@@ -11,7 +11,6 @@ export const ProductosContainer = styled.div`
 `;
 
 export const ProductosCard = styled.div`
-  background: var(--gray-bg);
   width: 300px;
   border-radius: 15px;
   padding: 1rem;

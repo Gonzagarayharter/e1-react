@@ -37,7 +37,7 @@ export const products = [
     {
       id: 6,
       title: 'Sofá Nápoles',
-      img: 'https://kandelsdeco.com/wp-content/uploads/2020/03/napoleon-22png.png',
+      img: 'https://tiendaliving.com.ar/cdn/shop/products/ROOSVELT_800x.png?v=1682011053',
       price: 420000,
       category: 'Sofás & Sillones',
     },

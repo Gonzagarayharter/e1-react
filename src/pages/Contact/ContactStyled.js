@@ -30,47 +30,13 @@ export const ContactContainer = styled.div`
     }
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     width: 100%;
-
-    & input,
-    & textarea {
-    padding: 10px;
-    width: 60%;
-    border: none;
-    outline: none;
-    background: #bfdcd0;
-    color: #000;
-    border-radius: 10px;
-    font-size: 18px;
-    }
-
-    & input::placeholder,
-    & textarea::placeholder {
-        color: #000;
-    }
-
-    & input:focus,
-    & textarea:focus {
-        background-color: #819e4f;
-        transition: .5s;
-    }
-
-    & button {
-        background-color: #819e4f;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        padding: 15px 25px;
-        cursor: pointer;
-        width: 30%;
-        font-size: 18px;
-    }
 
     @media (max-width: 750px) {
         width: 100vw;

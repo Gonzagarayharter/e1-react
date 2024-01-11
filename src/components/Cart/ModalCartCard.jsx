@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { formatPrice } from '../../utils/formatPrice';
 
@@ -17,9 +17,15 @@ import {
   QuantityContainerStyled,
 } from './ModalCartStyles';
 import { addToCart, removeFromCart } from '../../redux/cart/cartSlice';
+import DeleteConfirmationModal from '../ModalDelete/DeleteConfirmationModal';
 
 const ModalCartCard = ({ img, title, price, quantity, id }) => {
   const dispatch = useDispatch();
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+
+  const handleDeleteConfirmation = () => {
+    setIsDeleteModalOpen(true);
+  };
 
   return (
     <ProductContainerStyled>
@@ -29,8 +35,7 @@ const ModalCartCard = ({ img, title, price, quantity, id }) => {
         <PriceStyled>{formatPrice(price)}</PriceStyled>
       </TextContainerStyled>
       <QuantityContainerStyled>
-        <Increase
-          onClick={() => dispatch(removeFromCart(id))}
+        <Increase onClick={handleDeleteConfirmation}
         >
           {quantity === 1 ? <IoMdTrash /> : <FaMinus />}
         </Increase>
@@ -43,6 +48,12 @@ const ModalCartCard = ({ img, title, price, quantity, id }) => {
           <BsPlusLg />
         </Increase>
       </QuantityContainerStyled>
+      <DeleteConfirmationModal
+        isOpen={isDeleteModalOpen}
+        onClose={() => setIsDeleteModalOpen(false)}
+        onConfirm={() => dispatch(removeFromCart(id))}
+        itemName={title}
+      />
     </ProductContainerStyled>
   );
 };
