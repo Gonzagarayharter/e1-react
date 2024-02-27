@@ -12,7 +12,7 @@ const Hero = () => {
             to={"/tienda"}
             >Comprar</BotonHomeATienda>         
         </HeroTextDiv>
-        <img src="https://northdeco.com/cdn/shop/products/1647_2048x.png?v=1686225060" alt="" />
+        <img src="https://i.ibb.co/nsgv5SY/NQGm-Fo-683765062560-2.png" alt="" />
     </HeroDiv>
   )
 }
